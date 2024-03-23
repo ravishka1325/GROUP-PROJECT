@@ -80,11 +80,5 @@ public class AppointmentService {
         );
     }
 
-    @Scheduled(cron = "0 33 13 * * ?")
-    public void deletePastAppointments() {
-        LocalDateTime currentDateTime = LocalDateTime.now();
-        List<Appointment> pastAppointments = appointmentRepo.findByAppointmentDateTimeBefore(currentDateTime);
-        appointmentRepo.deleteAll(pastAppointments);
-    }
 
 }
