@@ -16,6 +16,7 @@ public class BusinessAppointmentDTO {
         private String userFname; // add user's first name field
         private String userLname; // add user's last name field
         private int serviceId;
+        private String serviceName;
         private int businessId;
         private LocalDateTime appointmentDateTime;
 
