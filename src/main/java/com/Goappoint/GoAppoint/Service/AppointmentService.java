@@ -12,11 +12,8 @@ import com.Goappoint.GoAppoint.Repo.ServiceRepo;
 import com.Goappoint.GoAppoint.Repo.UserRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,12 +37,10 @@ public class AppointmentService {
     public Appointment createAppointment(AppointmentDTO appointmentDTO) {
         Appointment appointment = mapDTOToEntity(appointmentDTO);
 
-        // Fetch related entities (User, Service, Business) from their respective repositories
         User user = userRepo.findById(appointmentDTO.getUserId()).orElseThrow();
         Service service = serviceRepo.findById(appointmentDTO.getServiceId()).orElseThrow();
         Business business = businessRepo.findById(appointmentDTO.getBusinessId()).orElseThrow();
 
-        // Set the related entities in the Appointment object
         appointment.setUser(user);
         appointment.setService(service);
         appointment.setBusiness(business);
