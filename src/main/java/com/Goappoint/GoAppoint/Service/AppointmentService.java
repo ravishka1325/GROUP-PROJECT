@@ -73,7 +73,6 @@ public class AppointmentService {
                 user.getUserFname(),
                 user.getUserLname(),
                 appointment.getService().getServiceId(),
-                appointment.getService().getServiceName(),
                 appointment.getBusiness().getBusinessId(),
                 appointment.getAppointmentDateTime()
         );
