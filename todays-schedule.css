@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.grid-s{
+    display: flex;
+}
+
+.quick-insight {
+    font-size: 20px;
+    padding-bottom: 16px;
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+
+.s-heading {
+    font-size: 39px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.g-col-6.g-col-md-4{
+    background-color: #EFEFE9;
+    border-radius: 30px;
+    border: solid 1px #EFEFE9;
+    width: 320px;
+    height: 155px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 35px;
+    margin-right: 75px;
+}
+
+.box-title{
+    font-size: 18px;
+}
+
+.quick-links {
+    font-size: 20px;
+    padding-bottom: 16px;
+    margin-top: 75px;
+    font-weight: bold;
+}
+
+.box-details {
+    font-size: 27px;
+}
+
+.appointments {
+    font-size: 28px;
+    padding-bottom: 16px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    margin-top: 102px;
+}
+
+
+.container {
+    background-color: #ffffff;
+    align-items: center;    
+    font-family: "Poppins", sans-serif;
+    font-style: normal; 
+}
+
+.box {
+    padding: 20px; 
+    margin-top: 22px;
+    margin-bottom: 24px;
+    background-color: #EFEFE9;
+    border-radius: 15px;
+    position: relative;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.box p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 10px; 
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    color: black;
+}
+
+.container .box img {
+    width: 24px;
+    height: auto;
+}
+
+.box a {
+    text-decoration: none; 
+    color: inherit; 
+  }
+
+.container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.real-time-2 h4 {
+    margin-top: 70px;
+}
+
+
+
+.container .table{
+    margin-top: 40px;
+  }
+  
+  .container .table td{
+    text-align: center;
+    padding:20px
+  }
+  
+  .container .table th{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .container .table tr{
+    font-size: 16px;
+    align-items: center;
+  }
+  
+  .container .table tr .us-name{
+    text-align: left;
+  }
+  
+  .container .table .cancel,
+  .container .table .confirm{
+    border-radius: 16px;
+    outline: none;
+    border-style: none !important;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+  
+  .container .table .confirm{
+    background-color: #EFEFE9;
+    margin-right: 15px;
+  }
+  
+  .container .table .cancel{
+    background-color: #EFEFE9;
+  }

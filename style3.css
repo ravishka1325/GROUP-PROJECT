@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #223030;
+    background-color: #E8D9CD;
+    justify-content: center;
+  }
+  
+  .footer-content{
+    display: flex;
+  }
+
+  
+  .footer li {
+      line-height: 2em;
+      list-style: none;
+  }
+  
+  .footer a {
+      text-decoration: none;
+      color: #000000;
+  }
+  
+  .footernav {
+      display: flex;
+        flex-flow: row wrap;
+  }
+  
+  .footernav > * {
+      flex: 1 50%;
+      margin-right: 5px;
+  }
+  
+  .navtitle {
+      font-size: 19px;
+  }
+  
+  .footer ul {
+      list-style: none;
+      padding-left: 0;
+  }
+
+  .footer-column {
+    margin-right: 11em;
+    align-items: center;
+    margin-top: -20px;
+  }
+
+  .fa-facebook:before {
+    margin-right: 11px;
+    font-size: 25px;
+  }
+
+  .fa-instagram:before {
+    margin-right: 11px;
+    font-size: 25px;
+  }
+
+  .fa-square-x-twitter:before {
+    margin-right: 11px;
+    font-size: 25px;
+  }
+
+  .fa-tiktok:before {
+    margin-right: 11px;
+    font-size: 25px;
+  }
+
+  .vl {
+    border-left: 2px solid rgb(0, 0, 0);
+    height: 11em;
+    width: 3em;
+  }
+
+  .footer-container2{
+    background-color: #AC7142;
+    border-top: 1px solid #AC7142;
+    border-bottom: 1px solid #AC7142;
+  }
+
+  p{
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .h2{
+    color: #223030;
+    font-weight: lighter;
+  }
+
+p.follow{
+  text-align: left;
+  color: #223030;
+  font-size: 18px;
+}
+
+img{
+  height: 55px;
+  width: 272px;
+  margin-left: -10px
+}
+
+.footer-column1{
+  font-size: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: -10px;
+}
