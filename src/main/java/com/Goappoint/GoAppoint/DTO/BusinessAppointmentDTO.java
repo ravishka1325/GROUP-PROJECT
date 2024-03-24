@@ -18,6 +18,7 @@ public class BusinessAppointmentDTO {
         private int serviceId;
         private String serviceName;
         private int businessId;
+        private String businessName;
         private LocalDateTime appointmentDateTime;
 
 }

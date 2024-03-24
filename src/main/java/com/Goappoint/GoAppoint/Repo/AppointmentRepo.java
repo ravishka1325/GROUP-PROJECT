@@ -1,12 +1,11 @@
 package com.Goappoint.GoAppoint.Repo;
 
 import com.Goappoint.GoAppoint.Entity.Appointment;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
-public interface AppointmentRepo extends CrudRepository<Appointment, Integer> {
+public interface AppointmentRepo extends JpaRepository<Appointment, Integer> {
     List<Appointment> findByBusinessBusinessId(int businessId);
-    List<Appointment> findByAppointmentDateTimeBefore(LocalDateTime dateTime);
+    List<Appointment> findByUserUserID(int userID);
 }

@@ -59,6 +59,18 @@ public class AppointmentController {
         }
     }
 
+    @GetMapping("/getAppointment/user/{userId}")
+    public ResponseEntity<ResponseDTO> getAppointmentsByUserId(@PathVariable int userId) {
+        try {
+            List<BusinessAppointmentDTO> appointments = appointmentService.getAppointmentsByUserId(userId);
+            ResponseDTO responseDTO = new ResponseDTO(VarList.RSP_SUCCESS, "Appointments retrieved successfully", appointments);
+            return ResponseEntity.ok(responseDTO);
+        } catch (Exception ex) {
+            ResponseDTO errorResponseDTO = new ResponseDTO(VarList.RSP_ERROR, ex.getMessage(), null);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponseDTO);
+        }
+    }
+
 
 
 }

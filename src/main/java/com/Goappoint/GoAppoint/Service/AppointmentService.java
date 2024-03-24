@@ -12,10 +12,8 @@ import com.Goappoint.GoAppoint.Repo.ServiceRepo;
 import com.Goappoint.GoAppoint.Repo.UserRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -65,6 +63,14 @@ public class AppointmentService {
                 .collect(Collectors.toList());
     }
 
+    public List<BusinessAppointmentDTO> getAppointmentsByUserId(int userId) {
+        List<Appointment> appointments = appointmentRepo.findByUserUserID(userId); // Change 'userId' to 'userID'
+        return appointments.stream()
+                .map(this::mapEntityToDTO)
+                .collect(Collectors.toList());
+    }
+
+
     private BusinessAppointmentDTO mapEntityToDTO(Appointment appointment) {
         User user = appointment.getUser();
         return new BusinessAppointmentDTO(
@@ -75,6 +81,7 @@ public class AppointmentService {
                 appointment.getService().getServiceId(),
                 appointment.getService().getServiceName(),
                 appointment.getBusiness().getBusinessId(),
+                appointment.getBusiness().getBusinessName(),
                 appointment.getAppointmentDateTime()
         );
     }
