@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -84,6 +85,14 @@ public class AppointmentService {
                 appointment.getBusiness().getBusinessId(),
                 appointment.getBusiness().getBusinessName(),
                 appointment.getAppointmentDateTime()
+        );
+    }
+
+    public long getAppointmentCountByBusinessIdAndDate(int businessId, LocalDate date) {
+        return appointmentRepo.countByBusinessBusinessIdAndAppointmentDateTimeBetween(
+                businessId,
+                date.atStartOfDay(),
+                date.atTime(23, 59, 59)
         );
     }
 

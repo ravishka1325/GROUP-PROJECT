@@ -45,6 +45,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/service/getService/{businessId}").permitAll()
                 .requestMatchers("/api/v1/appointment/createAppointment").permitAll()
                 .requestMatchers("/api/v1/appointment/getAppointment/{businessId}").permitAll()
+                .requestMatchers("/api/v1/appointment/appointmentCount/{businessId}").permitAll()
                 .requestMatchers("/api/v1/appointment/getAppointment/user/{userID}").permitAll()
                 .anyRequest().authenticated()
                 .and()

@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -64,6 +65,19 @@ public class AppointmentController {
         try {
             List<BusinessAppointmentDTO> appointments = appointmentService.getAppointmentsByUserId(userId);
             ResponseDTO responseDTO = new ResponseDTO(VarList.RSP_SUCCESS, "Appointments retrieved successfully", appointments);
+            return ResponseEntity.ok(responseDTO);
+        } catch (Exception ex) {
+            ResponseDTO errorResponseDTO = new ResponseDTO(VarList.RSP_ERROR, ex.getMessage(), null);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponseDTO);
+        }
+    }
+
+    @GetMapping("/appointmentCount/{businessId}")
+    public ResponseEntity<ResponseDTO> getAppointmentCountByBusinessIdAndDate(@PathVariable int businessId) {
+        try {
+            LocalDate currentDate = LocalDate.now();
+            long appointmentCount = appointmentService.getAppointmentCountByBusinessIdAndDate(businessId, currentDate);
+            ResponseDTO responseDTO = new ResponseDTO(VarList.RSP_SUCCESS, "Appointment count retrieved successfully", appointmentCount);
             return ResponseEntity.ok(responseDTO);
         } catch (Exception ex) {
             ResponseDTO errorResponseDTO = new ResponseDTO(VarList.RSP_ERROR, ex.getMessage(), null);
