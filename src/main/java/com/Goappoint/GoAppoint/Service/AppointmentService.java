@@ -78,6 +78,7 @@ public class AppointmentService {
                 user.getUserID(),
                 user.getUserFname(),
                 user.getUserLname(),
+                user.getUserMobile(),
                 appointment.getService().getServiceId(),
                 appointment.getService().getServiceName(),
                 appointment.getBusiness().getBusinessId(),
