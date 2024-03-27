@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,37 +61,6 @@ public class UserController {
 
     }
 
-    @PutMapping(value = "/updateUser")
-    public ResponseEntity updateUser(@RequestBody UserDTO userDTO){
-        try{
-            String res = userService.updateUser(userDTO);
-            if(res.equals("00")){
-                responseDTO.setCode(VarList.RSP_SUCCESS);
-                responseDTO.setMesseage("Success");
-                responseDTO.setContent(userDTO);
-                return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
-
-            }else if(res.equals("01")){
-                responseDTO.setCode(VarList.RSP_DUPLICATED);
-                responseDTO.setMesseage("Not A Registered User");
-                responseDTO.setContent(userDTO);
-                return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
-
-            }else{
-                responseDTO.setCode(VarList.RSP_FAIL);
-                responseDTO.setMesseage("Error");
-                responseDTO.setContent(null);
-                return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
-
-            }
-        }catch (Exception ex){
-            responseDTO.setCode(VarList.RSP_ERROR);
-            responseDTO.setMesseage(ex.getMessage());
-            responseDTO.setContent(null);
-            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-
-    }
 
 
     @PostMapping(value = "/login")

@@ -64,6 +64,7 @@ public class AppointmentService {
                 .collect(Collectors.toList());
     }
 
+    //Get Appointments by User ID
     public List<BusinessAppointmentDTO> getAppointmentsByUserId(int userId) {
         List<Appointment> appointments = appointmentRepo.findByUserUserID(userId); // Change 'userId' to 'userID'
         return appointments.stream()

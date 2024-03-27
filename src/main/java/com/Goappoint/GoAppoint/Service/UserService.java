@@ -31,14 +31,6 @@ public class UserService {
         }
     }
 
-    public String updateUser(UserDTO userDTO){
-        if(userRepo.existsById(userDTO.getUserID())){
-            userRepo.save(modelMapper.map(userDTO, User.class));
-            return VarList.RSP_SUCCESS;
-        }else{
-            return VarList.RSP_NO_DATA_FOUND;
-        }
-    }
 
     @Autowired
     private PasswordEncoder passwordEncoder;
