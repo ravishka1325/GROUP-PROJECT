@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.navigation-bar{
+            box-sizing:border-box;
+            font-family: 'Poppins';
+            position: fixed;       
+            top: 0;
+            bottom: 0;     
+            height: 100%;     
+            left: 0;     
+            background-color:#EFEFE9;     
+            width: 90px;     
+            overflow: hidden;     
+            transition: width 0.2s linear;     
+            box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);     
+            display: flex;  
+    }
+
+
+    .navigation-bar a{
+        position: relative;
+        font-size: 14px;
+        display: table;
+        width: 300px;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        list-style: none;
+        transition: 0.5s ease-out;
+
+    }
+    .navigation-bar ul{
+        list-style: none;
+        padding-left: 0px;
+       
+    }
+
+    .fa-solid,
+    .fa-regular,
+    .fas{
+        position: relative;
+        width:70px;
+        height: 40px;
+        top: 14px;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .nav-item{
+        position: relative;
+        top:12px;
+        margin-left: 10px;
+    }
+
+    a:hover{
+      font-weight: 700 ;
+    
+    }
+
+    .navigation-bar:hover{
+        width: 250px;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .navigation-bar ul i .last{
+        color: rebeccapurple;
+    }

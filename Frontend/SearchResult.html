@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bpage.css">
+    <link rel="stylesheet" href="css/usernav.css">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>GoAppoint | Search Result</title>
+</head>
+<body>
+
+    <nav>
+        <a href="userindex.html"><button class="logo-btn"><img class="logo" src="assets/logo.png" alt="GoAppoint"></button></a>
+
+             <div class="links">
+                 
+                 <label class="dropdown">
+ 
+                     <div class="dd-button">
+                         <a style="background-color: #efefe9;"><i style="background-color: #efefe9; " class="fa-solid fa-user"></i></a>
+                         <p style="margin: 0; background-color: #efefe9;"><span id="fname"></span></p>
+                     </div>
+                   
+                     <input type="checkbox" class="dd-input" id="test">
+                   
+                     <ul class="dd-menu">
+                       <li><a style="border-radius: 20px 20px 0px 0px;" href=""><i class="fa-regular fa-user"></i> Profile</a></li>
+                       <li><a href="userAppointments.html"><i class="fa-solid fa-business-time"></i> My Appointments</a></li>
+                       <button id="logoutButton" style="border-radius: 0px 0px 20px 20px; border: none;  background-color: #fff0;" onclick="logout()"><li><i class="fa-solid fa-right-from-bracket" style="background-color: #fff0;"></i> Sign out</li></button>
+                     </ul>
+                     
+                   </label>
+             </div>      
+             
+     </nav>
+     <script>
+        let fname = sessionStorage.getItem("fname");
+        document.getElementById("fname").innerText = fname;
+    </script>
+
+    
+<!-------------------------Searchbar-------------------------->
+
+
+<div class="search-area">
+
+                   
+    <input type="text" class="search-box" placeholder="Find Local Services, Classes" id="searchQuery">
+    <input type="text" class="search-box-2" placeholder="City, District, Zip" id="searchLocation"></input>
+
+    <div class="search-btn"> 
+        <button id="searchButton">Search</button>
+    </div>
+
+</div>
+
+</div>
+
+
+    <div class="container">
+        <div class="result">
+            <p2> Result for<span> "Result"</span></p2>
+        </div>
+
+        <div class="List">
+           
+        </div>
+        
+    </div>
+    
+    <script>
+       
+    window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchResultsParam = urlParams.get('searchResults');
+
+    if (searchResultsParam) {
+        const searchResults = JSON.parse(decodeURIComponent(searchResultsParam));
+        const resultServicesContainer = document.querySelector('.List');
+        resultServicesContainer.innerHTML = '';
+
+        searchResults.forEach(result => {
+            const serviceHTML = `
+            <div class="result-services" style="display:flex; justify-content: space-between;>
+                <div class="service">
+                    <div class="info">
+                        <h3>${result.businessName}</h3>
+                        <h5>${result.businessAddress}</h5>
+                        <h6>${result.businessMobile}</h5>
+                        <h6>${result.businessIndustryType}</h6>
+                    </div>
+                    <div class="book-btn-1" ">
+                        <button type="submit" class="book-btn" method="">Book an Appointment</button>
+                    </div> 
+                </div>
+            </div>
+            `;
+
+            const serviceDiv = document.createElement('div');
+            serviceDiv.innerHTML = serviceHTML;
+
+            const bookBtn = serviceDiv.querySelector('.book-btn');
+            bookBtn.addEventListener('click', () => {
+                const businessurl = `BusinessPage.html?businessName=${encodeURIComponent(result.businessName)}&id=${encodeURIComponent(result.businessId)}`;
+                window.open(businessurl, '_blank');
+            });
+
+                    resultServicesContainer.appendChild(serviceDiv);
+                });
+            }
+        });
+
+            
+        let dropMenu = document.getElementById("dropMenu");
+    
+        function toggleMenu(){
+            dropMenu.classList.toggle("open-menu");
+        }
+        </script>
+
+<script src="Js/jquery-3.7.1.min.js"></script>
+<script src="Js/search.js"></script>
+<script src="Js/user.js"></script>
+</body>
+</html>

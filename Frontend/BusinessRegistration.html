@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/BusinessRegistration.css" >
+    
+    <title>GoAppoint | Register Business</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="Js/jquery-3.7.1.min.js"></script>
+<script src="Js/business.js"></script>
+
+<body>
+    
+    <nav>
+        <button class="logo-btn"><img class="logo" src="logo.png" alt="GoAppoint"></button> 
+
+            <div class="all-links">
+             <div class="links" >
+                 <image class="profile" src="profile.png" ><p onclick="toggleMenu()">Your Name</p>
+                 
+             </div>      
+            
+             <div class="submenu-wrap" id="dropMenu">
+             <div class="submenu">
+
+                <a href="" class="sub-link">
+                    <img src="profile.png">
+                    <p>Profile</p>
+                    <span></span>
+                </a>
+               
+                    <a href="" class="sub-link">
+                        <img src="schedule.png">
+                        <p>My Appointments</p>
+                        <span></span>
+                    </a>
+                    
+                        <a href="" class="sub-link">
+                            <img src="exit.png">
+                            <p>Sign Out</p>
+                            <span></span>
+                        </a>
+             </div>
+            </div>
+        </div>
+             
+     </nav>
+
+
+     <div class="container">
+        
+        
+        <form action="#" class="form" method="POST">
+            <h3>Tell us about your business</h3>
+            <p1>This is what clients will see when booking with you online</p>
+
+            <div class="input-boxes">
+                <input type="text" placeholder="Business Name" size="65" id="businessName" >
+            </div>
+
+            <div class="input-boxes">
+                <input type="text" placeholder="Business Owner Name" size="65" id="ownerName">
+            </div>
+
+            <div class="input-boxes">
+                <input type="text" placeholder="Business Email"size="65" id="businessEmail">
+            </div>
+
+
+            <div class="input-boxes">
+                <select name="industryType" id="businessIndustryType">
+                    <option value="" disabled selected>Industry Type</option>
+                    <optgroup label="Top Industries">
+                      <option value="Saloon">Saloon</option>
+                      <option value="Massage">Massage</option>
+                      <option value="Estheticians">Estheticians</option>
+                      <option value="Spa">Spa</option>
+                      <option value="Beauty Consultant">Beauty Consultant</option>
+                      <option value="Barbers">Barbers</option>
+                      <option value="Yoga">Yoga</option>
+                      <option value="Personal Training">Personal Training</option>
+                      <option value="Pilates">Pilates</option>
+                      <option value="Acupuncture">Acupuncture</option>
+                    </optgroup>
+                    <optgroup label="Other Industries">
+                      <option value="Animal Care/Grooming">Animal Care/Grooming</option>
+                      <option value="Art & Drama">Art & Drama</option>
+                      <option value="Automotive">Automotive</option>
+                      <option value="Body Art">Body Art</option>
+                      <option value="Business Services">Business Services</option>
+                      <option value="Child Care">Child Care</option>
+                      <option value="Chiropractors">Chiropractors</option>
+                      <option value="Cleaning Services">Cleaning Services</option>
+                      <option value="Consultation/Interviews">Consultation/Interviews</option>
+                      <option value="Counselors">Counselors</option>
+                      <option value="Crossfit">Crossfit</option>
+                      <option value="Culinary">Culinary</option>
+                      <option value="Dental">Dental</option>
+                      <option value="Designers">Designers</option>
+                      <option value="Education & Training">Education & Training</option>
+                      <option value="Electrolysis">Electrolysis</option>
+                      <option value="finance_tax_insurance">Finance/Tax/Insurance</option> 
+                      <option value="government">Government</option>
+                        <option value="health_clubs">Health Clubs</option> 
+                        <option value="healthcare">Healthcare</option> 
+                        <option value="home_repair_improvement">Home Repair & Improvement</option> 
+                        <option value="information_technology">Information Technology</option> 
+                        <option value="integrated_medicine">Integrated Medicine</option> 
+                        <option value="language">Language</option> 
+                        <option value="lashes">Lashes</option> 
+                        <option value="lawn_garden">Lawn & Garden</option> 
+                        <option value="legal">Legal</option> 
+                        <option value="life_coaches">Life Coaches</option> 
+                        <option value="medical_spas">Medical Spas</option> 
+                        <option value="music">Music</option> 
+                        <option value="nail_artistry">Nail Artistry</option> 
+                        <option value="other">Other</option> 
+                        <option value="photographers">Photographers</option> 
+                        <option value="psychic_hypnosis_spirituality">Psychic/Hypnosis/Spirituality</option> 
+                        <option value="psychology">Psychology</option> 
+                        <option value="real_estate">Real Estate</option> 
+                        <option value="reflexology">Reflexology</option> 
+                        <option value="reiki">Reiki</option> 
+                        <option value="religious_organizations">Religious Organizations</option> 
+                        <option value="retail_sales">Retail Sales</option> 
+                        <option value="seamstress_clothing_design">Seamstress/Clothing Design</option> 
+                        <option value="social_services">Social Services</option> 
+                        <option value="sports_recreation">Sports & Recreation</option> 
+                        <option value="tanning">Tanning</option> 
+                        <option value="transportation">Transportation</option> 
+                        <option value="voice_dance">Voice/Dance</option> 
+                        <option value="wellness_center">Wellness Center</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="input-boxes-column">
+                <input type="text" placeholder="City" size="20" id="businessCity">
+                <select id="businessDistrict" name="district" >
+                    <option value="" disabled selected>Select a District</option>
+                    <option value="Ampara">Ampara</option>
+                    <option value="Anuradhapura">Anuradhapura</option>
+                    <option value="Badulla">Badulla</option>
+                    <option value="Batticaloa">Batticaloa</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Hambantota">Hambantota</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Kalutara">Kalutara</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Kegalle">Kegalle</option>
+                    <option value="Kilinochchi">Kilinochchi</option>
+                    <option value="Kurunegala">Kurunegala</option>
+                    <option value="Mannar">Mannar</option>
+                    <option value="Matale">Matale</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Moneragala">Moneragala</option>
+                    <option value="Mullaitivu">Mullaitivu</option>
+                    <option value="Nuwara Eliya">Nuwara Eliya</option>
+                    <option value="Polonnaruwa">Polonnaruwa</option>
+                    <option value="Puttalam">Puttalam</option>
+                    <option value="Ratnapura">Ratnapura</option>
+                    <option value="Trincomalee">Trincomalee</option>
+                    <option value="Vavuniya">Vavuniya</option>
+                  </select>
+                <input type="text" placeholder="Zip Code" size="10" id="businessZip">
+            </div>
+            
+            <div class="input-boxes">
+                <input type="text" placeholder="Mobile Number"size="65" id="businessMobile">
+            </div>
+
+            <div class="input-boxes">
+                <input type="password" placeholder="Password"size="65" id="businessPassword">
+            </div>
+            
+            <div class="input-boxes">
+                <input type="password" placeholder="Confirm Password"size="65">
+            </div>
+    
+            <div class="sign-up-btn">
+                <button type="button" class="sign-up" method="" onclick="saveBusiness()">Register Business</button>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            
+        let dropMenu = document.getElementById("dropMenu");
+            
+        function toggleMenu(){
+            dropMenu.classList.toggle("open-menu");
+        }
+        </script>
+
+</body>
+</html>

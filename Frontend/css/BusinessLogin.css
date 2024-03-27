@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #ffffff;
+    align-items: center;    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+}
+
+.container .password-options{
+    display: flex;
+    text-align: left;
+    padding-bottom: 15px;
+    margin-right: 17px;
+    margin-top: 27px;
+}
+
+.member-signup{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #EFEFE9;
+    padding: 80px;
+    text-align: center;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    width: 700px; 
+    margin-top: 4%;
+}
+
+h1{
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 28px;
+}
+
+
+.name{
+    padding-bottom: 15px;    
+}
+
+.pass{
+    padding-bottom: 50px;      
+}
+
+.login-button{
+    padding: 15px 20px;
+    border-style: none;
+    margin-top: 20px;
+}
+
+button{
+    background-color: #523D35;
+    height: 45px;
+    width: 300px;
+    border-radius: 75px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-style: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color:#685148;
+    transition: 0.7s;
+    border-style: none;
+    
+}
+
+.inputs input {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding: 15px;
+    width: 500px;
+    border-radius: 75px;
+    border-style: none;
+    outline: none;
+}
+
+input.email {
+    margin-bottom: 12px;
+}
+
+.password-options a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.member-signup a{
+    text-decoration: none;
+    color: #0000FF;
+    font-size: 14px;
+}
+
+.member-signup {
+    display: flex;
+    align-items: center;
+   text-decoration: none;
+}
+
+.forgot-pass a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container .pw {
+    padding-right: 30px; 
+}

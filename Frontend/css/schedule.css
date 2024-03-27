@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins';
+}
+
+.container{
+  margin-top: 120px !important;
+}
+
+.container .heading h2{
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.container .table{
+  margin-top: 40px;
+}
+
+.container .table td{
+  text-align: center;
+  padding:20px
+}
+
+.container .table th{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container .table tr{
+  font-size: 16px;
+  align-items: center;
+}
+
+.container .table tr .us-name{
+  text-align: left;
+}
+
+.container .table .cancel,
+.container .table .confirm{
+  border-radius: 16px;
+  outline: none;
+  border-style: none !important;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 10px 10px;
+}
+
+.container .table .confirm{
+  background-color: #EFEFE9;
+  margin-right: 15px;
+}
+
+.container .table .cancel{
+  background-color: #EFEFE9;
+}
+
+.real-time-2{
+  margin-top: 85px;
+}
+
+.navigation-bar{   
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  background-color:#EFEFE9;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+
+.navigation-bar a{
+  position: relative;
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  list-style: none;
+  transition: 0.5s ease-out;
+
+}
+.navigation-bar ul{
+  list-style: none;
+  padding-left: 0px;
+ 
+}
+
+.fa-solid,
+.fa-regular,
+.fas{
+  position: relative;
+  width:70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 0;
+}
+
+.nav-item{
+  position: relative;
+  top:12px;
+  margin-left: 10px;
+}
+
+a:hover{
+font-weight: 700 ;
+
+}
+
+.navigation-bar:hover{
+  width: 250px;
+  transition: all 0.1s ease-in-out;
+}
+
+.navigation-bar ul i .last{
+  color: rebeccapurple;
+}
+

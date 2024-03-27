@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/servicepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>GoAppoint | Business</title>
+    
+    
+</head>
+   
+<script src="Js/jquery-3.7.1.min.js"></script>
+<script src="Js/Businesspage.js"></script>
+<body>
+
+    <!----------------------------------------------------------------Navigation Bar------------------------------------------------------------>
+    
+    <nav>
+        <button class="logo-btn"><img class="logo" src="assets/logo.png" alt="GoAppoint"></button> 
+             <div class="links">
+                 
+                 <label class="dropdown">
+ 
+                     <div class="dd-button">
+                         <a style="background-color: #efefe9;"><i style="background-color: #efefe9; " class="fa-solid fa-user"></i></a>
+                         <p style="margin: 0; background-color: #efefe9;"><span id="fname"></span></p>
+                     </div>
+                   
+                     <input type="checkbox" class="dd-input" id="test">
+                   
+                     <ul class="dd-menu">
+                       <li><a style="border-radius: 20px 20px 0px 0px;" href=""><i class="fa-regular fa-user"></i> Profile</a></li>
+                       <li><a href="userAppointments.html"><i class="fa-solid fa-business-time"></i> My Appointments</a></li>
+                       <button id="logoutButton" style="border-radius: 0px 0px 20px 20px; border: none;  background-color: #fff0;" onclick="logout()"><li><i class="fa-solid fa-right-from-bracket" style="background-color: #fff0;"></i> Sign out</li></button>
+                     </ul>
+                     
+                   </label>
+             </div>      
+     </nav>
+
+    <div class="container">
+        <div class="column-1">
+
+            <div class="heading">
+                <div class="heading-1">
+                    <h3 id="businessName"></h3>
+                </div>
+            </div>
+
+            <div class="image">
+                <label id="image-label" for="image-file">
+                    <img id="business-image" src="" alt="Business Image" height="100%" width="780px"/>
+                </label>
+            </div>
+
+            <h5>Services</h5>
+            <div class="Services">
+                <div class="services-inside">
+                    <div class="name">
+                        <p2>Service Name</p2>
+                    </div>
+
+                    <div class="charges">
+                        <p3>Service Price</p3>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="column-2">
+            <div class="book-btn-1">
+                <button type="submit" class="book-btn" method="" style="width: 330px;">Book an Appointment</button>
+            </div> 
+
+
+            <div class="location">
+                <h3 id="businessAddress"></h3>
+            </div>
+
+            <h4>Owner's and Business Details</h4>
+            <div class="info">
+                <div class="name" id="ownerNameContainer" style="display: flex;">
+                <p><i class="fa-solid fa-user-tie"></i></p>
+                </div>
+                <div class="location" id="addressContainer" style="display: flex;">
+                <p id="businessAddress"><i class="fa-solid fa-location-dot"></i></p>
+                </div>
+            </div>
+
+            <div class="desc">
+                <h4>About us</h4>
+                <p id="businessAbout"></p>
+            </div>
+
+               <div class="contact-details">
+                    <div class="contact-heading">
+                        <h4>Contact & Business Hours</h4>  
+                    </div>
+                    <div class="ph-nu">
+                        <img src="assets/phone.png" alt="ph">
+                        <p1 id="businessMobile" style="margin-left: -100px;"></p1>
+                        <button type="submit" class="book-btn" method="">Call</button>                          
+                    </div>
+                </div>
+
+                    <div class="app-timings">
+                        <div class="app-dates">
+                            <div class="dates">
+                                <p>Monday</p>
+                            </div>
+                            <div class="dates">
+                                <p>Tuesday</p>
+                            </div>
+                            <div class="dates">
+                                <p>Wednesday</p>
+                            </div>
+                            <div class="dates">
+                                <p>Thursday</p>
+                            </div>
+                            <div class="dates">
+                                <p>Friday</p>
+                            </div>
+                            <div class="dates">
+                                <p>Saturday</p>
+                            </div>
+                            <div class="dates">
+                                <p>Sunday</p>
+                            </div>
+                        </div>
+
+                        <div class="app-times">
+                            <div class="times">
+                                <p id="monday-hours">09:00 AM - 04:00 PM</p>
+                            </div>
+                            <div class="times">
+                                <p id="tuesday-hours">09:00 AM - 04:00 PM</p>
+                            </div>
+                            <div class="times">
+                                <p id="wednesday-hours">09:00 AM - 04:00 PM</p>
+                            </div>
+                            <div class="times">
+                                <p id="thursday-hours">09:00 AM - 04:00 PM</p>
+                            </div>
+                            <div class="times">
+                                <p id="friday-hours">09:00 AM - 04:00 PM</p>
+                            </div>
+                            <div class="times">
+                                <p id="saturday-hours">09:00 AM - 04:00 PM</p>
+                            </div>
+                            <div class="times">
+                                <p id="sunday-hours">Closed</p>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+    </div>
+
+
+<div class="footer-container">
+        <footer class="footer">
+            <div class="footer-content">
+        <div class="footer-column1">
+            
+            <img class="imgf" src="assets/logo.png" alt="footer logo">
+            <div class="s-icon">
+                <div class="follow">
+                    <p class="p-follow">FOLLOW US</p>
+                </div>
+            <a href="https://www.facebook.com/" target="parent"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="parent"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=en" target="parent"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://www.tiktok.com/en/" target="parent"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            
+            
+        </div>
+        
+        <div class="vl"></div>
+        
+        <div class="footer-column">
+            <h2 class="navtitle">GoAppoint Business</h2>
+            <li>
+                <a href="BusinessRegistration.html">Register your Business</a>
+            </li>
+            <li>
+                <a href="BusinessLogin.html">Login to your Business</a>
+            </li>
+        </div>
+        
+        <div class="footer-column">
+                <h2 class="navtitle">Company</h2>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Terms of Use</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+        </div>
+        
+        <div class="footer-column">
+                <h2 class="navtitle">Businesses</h2>
+                <li>
+                    <a href="#">Saloon & Beauty</a>
+                </li>
+                <li>
+                    <a href="#">Barber</a>
+                </li>
+                <li>
+                    <a href="#">Tattoo</a>
+                </li>
+                <li>
+                    <a href="#">Legal Services</a>
+                </li>
+                <li>
+                    <a href="#">Car Services</a>
+                </li>    
+            </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        
+        <div class="footer-container2">
+           <p class="text">Copyright © GoAppoint 2024</p>
+        </div>
+        </body>
+        </footer> 
+
+    <script>
+
+        function isLoggedIn() {
+                const fname = sessionStorage.getItem('fname');
+                const lname = sessionStorage.getItem('lname');
+                const email = sessionStorage.getItem('email');
+                const mobile = sessionStorage.getItem('mobile');
+                const address = sessionStorage.getItem('address');
+                const city = sessionStorage.getItem('city');
+                const district = sessionStorage.getItem('district');
+                const zip = sessionStorage.getItem('zip');
+                return fname || lname || email || mobile || address || city || district || zip;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookBtn = document.querySelector('.book-btn');
+
+            bookBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                if (!isLoggedIn()) {
+                    window.location.href = 'login.html';
+                } else {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const businessId = urlParams.get('id');
+                    const businessName = document.getElementById("businessName").innerText;
+                    window.location.href = `book.html?id=${businessId}&name=${encodeURIComponent(businessName)}`;
+                }
+            });
+        });
+    </script>
+
+    <script>
+        let fname = sessionStorage.getItem("fname");
+        document.getElementById("fname").innerText = fname;
+    </script>
+
+<script src="Js/user.js"></script>
+
+    
+</body>
+</html>

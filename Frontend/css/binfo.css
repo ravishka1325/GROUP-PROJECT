@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans  ;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.b-info{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information{
+    background-color: #EFEFE9;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 900px;
+    padding: 50px 0px;
+    border-radius: 20px;
+    margin: 30px 0px 80px 0px;
+}
+
+.b-details{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.b-details input{
+    padding: 10px ;
+    width: 700px;
+    border-radius: 16px;
+    outline: none !important;
+    border-style: none;
+    margin-bottom: 10px;
+}
+
+.b-details .bdesc{
+    padding: 100px 0px;
+    text-align: left !important;
+}
+
+.heading{
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-top: 70px;
+    align-items: center !important;
+}
+
+.heading h2{
+    font-weight: 800;
+}
+
+
+.sub-heading{
+    margin-left: 16%;
+    display: inline-block;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.b-category{
+    margin-top: 50px;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.heading .save{
+    background-color: #223030;
+    color: white;
+    border-style: none !important;
+    outline: none;
+    font-weight: 500;
+    padding: 15px 50px;
+    border-radius: 15px;
+    font-size: 18px;
+ }
+
+ .sub-heading h4{
+    font-weight: 600;
+ }
+
+ .b-info-2{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #cars{
+    padding: 20px;
+    width: 700px;
+    border-radius: 16px;
+    outline: none !important;
+    border-style: none;
+    margin-bottom: 5%;
+ }
+
+ .information-2{
+    background-color: #EFEFE9;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 900px;
+    padding: 100px 0px;
+    border-radius: 20px;
+    height: 500px;
+ }
+ .bi-btns{
+    display: flex;
+    gap: 50px;
+    padding: 30px;
+ }
+ .btn.btn-dark{
+    width: 185px;
+    height: 55px;
+  }

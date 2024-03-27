@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*----------------------------------------------------------------Searchbar------------------------------------------------*/
+
+.search-area{
+    background-color: #Ffff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.search-area .material-symbols-outlined{
+    margin-right: 10px;
+    background-color:#bba58f;
+    border-radius: 60px;
+    padding: 10px;
+}
+
+.search-area .search-box{
+    width: 30%;
+    margin-left: 10px;
+    background-color: #EFEFE9;
+    padding: 15px 10px;  
+    border-radius: 10px;
+}
+
+.search-area .search-box-2{
+    width: 15%;
+    margin-left: 10px;
+    background-color: #EFEFE9;
+    padding: 15px 10px;  
+    border-radius: 10px;
+    
+}
+
+.search-area input{
+    border-style: none !important;
+    outline: none;
+}
+
+.search-btn button{
+    margin-left: 10px;
+    padding: 15px 15px;
+    border-radius: 15px;
+    border-style: none !important;
+    background-color: #BBA58F;
+    font-weight: 700;
+    cursor: pointer;
+}
+/*------------------------------------Result Area------------------------------------*/
+
+.result{
+    padding-bottom: 50px;
+}
+
+.result span{
+    font-weight: 800;
+}
+
+.result-services{
+    background-color: #EFEFE9;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 16px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+ .image{
+    width: 100px;
+    height: auto;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+ }
+
+ .image img{
+    width: 100px;
+    height: auto;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+ }
+
+.result-services .service{
+    display: flex;
+
+}
+
+.result-services .service .info{
+    padding-left: 20px;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-btn-1 .book-btn{  
+    background-color: #523d35;
+    border: none;
+    border-style: none !important;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 15px 40px 15px 40px;
+    border-radius: 12px;
+}
+
+/*-----------------------dropdown-------------*/
+
+.submenu-wrap{
+    margin-top: 5px;
+    position: absolute;
+    width: 200px;
+    top: 100%;
+    right: 23%;
+    background-color: #E8D9CD;
+    border-radius: 15px;
+    color: #000000;  
+    max-height: 000px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.open-menu{
+    max-height: 400px;
+}
+
+.submenu-wrap .sub-link{
+    display: flex;
+    align-items:center; 
+}
+.submenu-wrap .sub-link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.submenu-wrap img,
+.submenu-wrap p{
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.submenu-wrap p:hover {
+    font-weight: 700;
+    transition: transform 0.5s
+}
+
+.sub-link img{ 
+    padding: 5px 5px 5px 25px;
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.search-areas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.search-areas .material-symbols-outlined{
+    margin-right: 10px;
+    background-color:#bba58f;
+    border-radius: 60px;
+    padding: 10px;
+}
+
+.search-areas .search-box{
+    width: 30%;
+    margin-left: 10px;
+    background-color: #e8d9cd;
+    padding: 15px 10px;  
+    border-radius: 10px;
+}
+
+.search-areas .search-box-2{
+    width: 15%;
+    margin-left: 10px;
+    background-color: #e8d9cd;
+    padding: 15px 10px;  
+    border-radius: 10px;
+    
+}
+
+.search-areas input{
+    border-style: none !important;
+    outline: none;
+}
+
+.search-btn button{
+    margin-left: 10px;
+    padding: 15px 15px;
+    border-radius: 15px;
+    border-style: none !important;
+    background-color: #bba58f;
+    font-weight: 700;
+    cursor: pointer;
+}
